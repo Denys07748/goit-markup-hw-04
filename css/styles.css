@@ -23,6 +23,7 @@ p, h1, h2, h3 {
 }
 
 .link {
+    display: block;
     text-decoration: none;
     color: inherit;
 }
@@ -134,13 +135,11 @@ body {
     color: var(--title-text-color);
 }
 
-.menu-nav-item:not(:last-child),
-.contacts-item:not(:last-child) {
+.menu-nav-item:not(:last-child) {
     margin-right: 50px;
 }
 
 .menu-nav-link {
-    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -159,6 +158,20 @@ body {
 
 .contacts-list {
     margin-left: auto;
+} 
+
+.contacts-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.contacts-link {
+    display: flex;
+    align-items: center;
+}
+
+.contacts-icon {
+    margin-right: 10px;
+    fill: currentColor;
 }
 
 /* Section hero */
@@ -306,33 +319,33 @@ body {
     text-align: center;
 }
 
-.team-social-list {
+.social-list {
     display: flex;
     justify-content: center;
     margin-top: 16px;
 }
 
-.team-social-item:not(:last-child) {
+.social-item:not(:last-child) {
     margin-right: 10px;
 }
 
-.team-social-link {
+.social-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 44px;
     height: 44px;
-    background-color: var(--primery-bg-color);
     border-radius: 50%;
+    background-color: var(--primery-bg-color);
     color: var(--social-icon-color);
 }
 
-.team-social-icon {
+.social-icon {
     fill: currentColor;
 }
 
-.team-social-link:hover,
-.team-social-link:focus {
+.social-link:hover,
+.social-link:focus {
     background-color: var(--accent-color);
     color: var(--primery-bg-color);
 }
@@ -374,6 +387,16 @@ body {
     padding-bottom: 60px;
     background-color: var(--secondary-bg-color);
 }
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-left {
+    margin-right: 70px;
+}
+
 .footer .logo {
     display: block;
     margin-bottom: 20px;
@@ -396,6 +419,28 @@ body {
 .address-link:focus {
     color: var(--accent-color);
 }
+
+.footer-right-title {
+    color: var(--primery-bg-color);
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.footer-right .social-list {
+    margin-top: 20px;
+}
+
+.footer-right .social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primery-bg-color);
+}
+
+.footer-right .social-link:hover,
+.footer-right .social-link:focus {
+    background-color: var(--accent-color);
+}
+
 
 /*-------------- Page portfolio ------------ */
 
@@ -449,7 +494,7 @@ body {
     line-height: 1.87;
 }
 
-/* .project-link:hover,
+.project-link:hover,
 .project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-} */
+}
